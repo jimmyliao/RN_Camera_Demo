@@ -13,7 +13,14 @@ export default class HomePage extends React.Component {
             this.props.navigation.navigate('Profile')
         }
         />
-        
+
+        <Button
+          title="QRCode"
+          onPress={() =>
+            this.props.navigation.navigate('QRCodeSignInPage')
+        }
+        />
+
       </View>
     );
   }

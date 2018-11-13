@@ -21,12 +21,13 @@ import { RNCamera, FaceDetector } from 'react-native-camera';
 
 import HomePage from './HomePage';
 import ProfilePage from './ProfilePage';
-
+import QRCodeSignInPage from './src/QRCodeScanner/QRCodeSignInPage';
 
 const RootStack = createStackNavigator(
   {
     Home: { screen: HomePage },
     Profile: { screen: ProfilePage },
+    QRCodeSignInPage: { screen: QRCodeSignInPage },
   },
   {
     initialRouteName: 'Home',
