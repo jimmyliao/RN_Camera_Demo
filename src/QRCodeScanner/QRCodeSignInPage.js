@@ -83,21 +83,6 @@ export default class QRCodeSignInPage extends React.Component {
     );
   }
 
-
-  render_old() {
-    return (
-      <View style={styles.container}>
-        <Text>QRCodePage here.</Text>
-        <Button
-          title="Go to HomePage"
-          onPress={() =>
-            this.props.navigation.navigate('Home')
-        }
-        />
-        
-      </View>
-    );
-  }
 }
 
 const styles = StyleSheet.create({

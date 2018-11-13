@@ -7,17 +7,23 @@ export default class HomePage extends React.Component {
     return (
       <View style={styles.container}>
         <Text>HomePage here.</Text>
-        <Button
+        {/* <Button
           title="Go to ProfilePage"
           onPress={() =>
             this.props.navigation.navigate('Profile')
         }
-        />
-
+        /> */}
         <Button
           title="QRCode"
           onPress={() =>
             this.props.navigation.navigate('QRCodeSignInPage')
+        }
+        />
+
+        <Button
+          title="CameraPage"
+          onPress={() =>
+            this.props.navigation.navigate('CameraPage')
         }
         />
 
