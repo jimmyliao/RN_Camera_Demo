@@ -1,42 +1,29 @@
-/**
- * Sample App for Camera preview and QRScanner
- */
+import React from 'react';
+import { StyleSheet, Text, View, Button} from 'react-native';
+// import ProfilePage from './ProfilePage';
 
-import React, {Component} from 'react';
-
-import {
-  createStackNavigator,
-} from 'react-navigation';
-
-import {
-  Platform, View,
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,  
-} from 'react-native';
-
-class HomePage extends React.Component {
-  static navigationOptions = {
-    title: 'Welcome',
-  };
-
-  // render() {
-  //   const { navigate } = this.props.navigation;
-  //   return (
-  //     <Button
-  //       title="Go to Jimmy's profile"
-  //       onPress={() =>
-  //         navigate('Profile', { name: 'Jimmy' })
-  //       }
-  //     />
-  //   );
-  // }
+export default class HomePage extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
+      <View style={styles.container}>
+        <Text>HomePage here.</Text>
+        <Button
+          title="Go to ProfilePage"
+          onPress={() =>
+            this.props.navigation.navigate('Profile')
+        }
+        />
+        
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
