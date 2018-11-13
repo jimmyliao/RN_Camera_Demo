@@ -16,13 +16,6 @@ import {
 } from 'react-native';
 import { RNCamera, FaceDetector } from 'react-native-camera';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 type Props = {};
 export default class App extends Component<Props> {
 
@@ -32,10 +25,6 @@ export default class App extends Component<Props> {
     this.state = {
       shouldFaceDetect: false,
     };
-
-    // this._companySelection = this._companySelection.bind(this);
-    // this._onBarCodeRead = this._onBarCodeRead.bind(this);
-    // this._stillScanning = this._stillScanning.bind(this);
   }
 
   componentWillMount() {
@@ -49,8 +38,6 @@ export default class App extends Component<Props> {
   }
 
   render() {
-    // const { shouldFaceDetect } = this.state;
-    // this.setState({shouldFaceDetect: true});
 
     return (
       <View style={styles.container}>
@@ -63,10 +50,6 @@ export default class App extends Component<Props> {
             flashMode={RNCamera.Constants.FlashMode.on}
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
-            // onGoogleVisionBarcodesDetected={({ barcodes }) => {
-            //   console.log(barcodes)
-            // }}
-            // onBarCodeRead={this._onBarCodeRead}
             onBarCodeRead={this.state.shouldFaceDetect ? this._onBarCodeRead.bind(this) : null}
         />
         <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
@@ -107,10 +90,6 @@ export default class App extends Component<Props> {
     alert("hey sported barcode!");
     console.log('_onBarCodeRead end.');
     
-  }
-
-  _stillScanning() {
-    console.log('still scanning...');
   }
 
   
