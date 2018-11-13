@@ -1,5 +1,6 @@
 /**
  * Sample App for Camera preview and QRScanner
+ * Refrence: https://alligator.io/react/react-native-navigation/
  */
 
 import React, {Component} from 'react';
