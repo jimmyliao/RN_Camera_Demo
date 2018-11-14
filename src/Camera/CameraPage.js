@@ -58,7 +58,7 @@ export default class CameraPage extends React.Component {
           flashMode={RNCamera.Constants.FlashMode.on}
           permissionDialogTitle={'Permission to use camera'}
           permissionDialogMessage={'We need your permission to use your camera phone'}
-          onBarCodeRead={this.state.shouldFaceDetect ? this._onBarCodeRead.bind(this) : null}
+          // onBarCodeRead={this.state.shouldFaceDetect ? this._onBarCodeRead.bind(this) : null}
       />
 
           
