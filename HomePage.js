@@ -16,7 +16,7 @@ export default class HomePage extends React.Component {
         <Button
           title="QRCode"
           onPress={() =>
-            this.props.navigation.navigate('QRCodeSignInPage')
+            this.props.navigation.navigate('QRCodeScanPage')
         }
         />
 

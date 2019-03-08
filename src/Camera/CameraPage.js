@@ -111,58 +111,6 @@ export default class CameraPage extends React.Component {
     );
   }
 
-  render_old() {
-    if (this.state.imgUri != "") {
-      return <ImageBackground source={imageUri}/>;
-    } else {
-      return (
-        <View style={styles.container}>
-          <RNCamera
-              ref={ref => {
-                this.camera = ref;
-              }}
-              style = {styles.preview}
-              type={RNCamera.Constants.Type.back}
-              flashMode={RNCamera.Constants.FlashMode.on}
-              permissionDialogTitle={'Permission to use camera'}
-              permissionDialogMessage={'We need your permission to use your camera phone'}
-              onBarCodeRead={this.state.shouldFaceDetect ? this._onBarCodeRead.bind(this) : null}
-          />
-
-              
-          <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
-          <TouchableOpacity
-              onPress={this.takePicture.bind(this)}
-              style = {styles.capture}
-          >
-              <Text style={{fontSize: 14}}> SNAP. </Text>
-          </TouchableOpacity>
-  
-          <TouchableOpacity
-              onPress={this._resetCameraState.bind(this)}
-              style = {styles.capture}
-          >
-              <Text style={{fontSize: 14}}> ReScan. </Text>
-          </TouchableOpacity>
-  
-          <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate('Home')
-              }
-              style = {styles.capture}
-          >
-              <Text style={{fontSize: 14}}> Home. </Text>
-          </TouchableOpacity>
-  
-          </View>
-        </View>
-      );
-
-    }
-
-
-  }
-
 }
 
 const styles = StyleSheet.create({

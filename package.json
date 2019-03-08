@@ -1,6 +1,7 @@
 {
-  "name": "RN_Camera_Demo",
-  "version": "0.0.1",
+  "name": "react-native-camera",
+  "version": "1.0.0",
+  "author": {"email": "sjliao@gmail.com", "name": "Jimmy Liao"},
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
